@@ -20,8 +20,9 @@ echo -n 'Email: '
 read email
 echo -n 'User: '
 read user
-echo -n 'Passwd'
+echo -n 'Passwd: '
 read -s passwd
+echo
 git config --global user.name "$name"
 git config --global user.email "$email"
 echo 'machine github.com' >> ~/.netrc
