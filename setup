@@ -1,0 +1,16 @@
+#!/bin/sh
+echo 'Installing zsh python3 python2 vim'
+apk add zsh python3 python2 vim
+echo 'Cloning dotfiles'
+cd ~/
+git clone https://github.com/tomokiz/dotfiles
+cd dotfiles
+echo 'Setup dotfiles'
+./setup
+echo 'Cloning motd'
+cd ~/ishconfig
+rm /etc/motd
+cp ./motd /etc/motd
+echo 'Changing loginshell to zsh'
+sed -i 's/ash/zsh/g' /etc/passwd
+echo 'Setup Finished!!'
