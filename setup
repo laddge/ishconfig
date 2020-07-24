@@ -13,4 +13,18 @@ rm /etc/motd
 cp ./motd /etc/motd
 echo 'Changing loginshell to zsh'
 sed -i 's/ash/zsh/g' /etc/passwd
+echo 'Setup git'
+echo -n 'Name: '
+read name
+echo -n 'Email: '
+read email
+echo -n 'User: '
+read user
+echo -n 'Passwd'
+read -s passwd
+git config --global user.name "$name"
+git config --global user.email "$email"
+echo 'machine github.com' >> ~/netrc
+echo "login $user" >> ~/.netrc
+echo "password $passwd" >> ~/netrc
 echo 'Setup Finished!!'
