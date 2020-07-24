@@ -24,7 +24,7 @@ echo -n 'Passwd'
 read -s passwd
 git config --global user.name "$name"
 git config --global user.email "$email"
-echo 'machine github.com' >> ~/netrc
+echo 'machine github.com' >> ~/.netrc
 echo "login $user" >> ~/.netrc
-echo "password $passwd" >> ~/netrc
+echo "password $passwd" >> ~/.netrc
 echo 'Setup Finished!!'
