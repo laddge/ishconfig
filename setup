@@ -1,6 +1,6 @@
 #!/bin/sh
 echo 'Installing packages'
-apk add zsh python3 python2 py2-pip vim
+apk add zsh python3 python2 py2-pip vim tmux
 echo 'Cloning dotfiles'
 cd ~/
 git clone https://github.com/tomokiz/dotfiles
